@@ -1,6 +1,6 @@
 ﻿namespace AgendaADONET
 {
-    partial class Form1
+    partial class frmAgenda
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,19 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            dgvAgenda = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvAgenda).BeginInit();
             SuspendLayout();
             // 
-            // Form1
+            // dgvAgenda
+            // 
+            dgvAgenda.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvAgenda.Location = new Point(12, 12);
+            dgvAgenda.MultiSelect = false;
+            dgvAgenda.Name = "dgvAgenda";
+            dgvAgenda.ReadOnly = true;
+            dgvAgenda.Size = new Size(776, 426);
+            dgvAgenda.TabIndex = 0;
+            // 
+            // frmAgenda
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Name = "Form1";
-            Text = "Form1";
-            Load += Form1_Load;
+            Controls.Add(dgvAgenda);
+            Name = "frmAgenda";
+            Text = "Agenda";
+            Load += frmAgenda_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvAgenda).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
+
+        private DataGridView dgvAgenda;
     }
 }
