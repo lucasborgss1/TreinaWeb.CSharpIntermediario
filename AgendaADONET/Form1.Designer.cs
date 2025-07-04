@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             dgvAgenda = new DataGridView();
+            btnAdicionar = new Button();
+            btnAlterar = new Button();
+            btnExcluir = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvAgenda).BeginInit();
             SuspendLayout();
             // 
@@ -39,14 +42,45 @@
             dgvAgenda.MultiSelect = false;
             dgvAgenda.Name = "dgvAgenda";
             dgvAgenda.ReadOnly = true;
-            dgvAgenda.Size = new Size(776, 426);
+            dgvAgenda.Size = new Size(776, 367);
             dgvAgenda.TabIndex = 0;
+            // 
+            // btnAdicionar
+            // 
+            btnAdicionar.Location = new Point(65, 409);
+            btnAdicionar.Name = "btnAdicionar";
+            btnAdicionar.Size = new Size(75, 23);
+            btnAdicionar.TabIndex = 1;
+            btnAdicionar.Text = "Adicionar";
+            btnAdicionar.UseVisualStyleBackColor = true;
+            // 
+            // btnAlterar
+            // 
+            btnAlterar.Location = new Point(146, 409);
+            btnAlterar.Name = "btnAlterar";
+            btnAlterar.Size = new Size(75, 23);
+            btnAlterar.TabIndex = 2;
+            btnAlterar.Text = "Alterar";
+            btnAlterar.UseVisualStyleBackColor = true;
+            // 
+            // btnExcluir
+            // 
+            btnExcluir.Location = new Point(227, 409);
+            btnExcluir.Name = "btnExcluir";
+            btnExcluir.Size = new Size(75, 23);
+            btnExcluir.TabIndex = 3;
+            btnExcluir.Text = "Excluir";
+            btnExcluir.UseVisualStyleBackColor = true;
+            btnExcluir.Click += btnExcluir_Click;
             // 
             // frmAgenda
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnExcluir);
+            Controls.Add(btnAlterar);
+            Controls.Add(btnAdicionar);
             Controls.Add(dgvAgenda);
             Name = "frmAgenda";
             Text = "Agenda";
@@ -58,5 +92,8 @@
         #endregion
 
         private DataGridView dgvAgenda;
+        private Button btnAdicionar;
+        private Button btnAlterar;
+        private Button btnExcluir;
     }
 }

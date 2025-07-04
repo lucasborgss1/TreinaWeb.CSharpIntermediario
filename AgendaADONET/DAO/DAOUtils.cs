@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Common;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Common;
+using Microsoft.Data.SqlClient;
 
 namespace AgendaADONET.DAO
 {
@@ -12,7 +7,7 @@ namespace AgendaADONET.DAO
     {
         public static DbConnection GetConexao()
         {
-            DbConnection connection = new SqlConnection("Server=LUCASBORGSS;Database=TreinaWebCSharpIntermediario;Integrated Security=true;");
+            DbConnection connection = new SqlConnection("Server=LUCASBORGSS;Database=TreinaWebCSharpIntermediario;Integrated Security=true;TrustServerCertificate=true;");
             connection.Open();
             return connection;
         }
