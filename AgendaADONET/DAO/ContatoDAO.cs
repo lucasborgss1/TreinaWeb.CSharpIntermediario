@@ -40,5 +40,30 @@ namespace AgendaADONET.DAO
             comando.ExecuteNonQuery();
 
         }
+
+        public void Inserir(string nome, string email, int telefone)
+        {
+            DbConnection conexao = DAOUtils.GetConexao();
+            DbCommand comando = DAOUtils.GetComando(conexao);
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "INSERT INTO CONTATOS (NOME, EMAIL, TELEFONE) VALUES (@NOME, @EMAIL, @TELEFONE)";
+            comando.Parameters.Add(new SqlParameter("@NOME", nome));
+            comando.Parameters.Add(new SqlParameter("@EMAIL", email));
+            comando.Parameters.Add(new SqlParameter("@TELEFONE", telefone));
+            comando.ExecuteNonQuery();
+        }
+
+        public void Atualizar(int id, string nome, string email, int telefone)
+        {
+            DbConnection conexao = DAOUtils.GetConexao();
+            DbCommand comando = DAOUtils.GetComando(conexao);
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "UPDATE CONTATOS SET NOME = @NOME, EMAIL = @EMAIL, TELEFONE = @TELEFONE WHERE ID = @ID";
+            comando.Parameters.Add(new SqlParameter("@ID", id));
+            comando.Parameters.Add(new SqlParameter("@NOME", nome));
+            comando.Parameters.Add(new SqlParameter("@EMAIL", email));
+            comando.Parameters.Add(new SqlParameter("@TELEFONE", telefone));
+            comando.ExecuteNonQuery();
+        }
     }
 }
