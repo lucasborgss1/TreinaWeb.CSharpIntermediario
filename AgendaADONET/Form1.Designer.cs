@@ -47,25 +47,27 @@
             // 
             // btnAdicionar
             // 
-            btnAdicionar.Location = new Point(65, 409);
+            btnAdicionar.Location = new Point(12, 385);
             btnAdicionar.Name = "btnAdicionar";
             btnAdicionar.Size = new Size(75, 23);
             btnAdicionar.TabIndex = 1;
             btnAdicionar.Text = "Adicionar";
             btnAdicionar.UseVisualStyleBackColor = true;
+            btnAdicionar.Click += btnAdicionar_Click;
             // 
             // btnAlterar
             // 
-            btnAlterar.Location = new Point(146, 409);
+            btnAlterar.Location = new Point(93, 385);
             btnAlterar.Name = "btnAlterar";
             btnAlterar.Size = new Size(75, 23);
             btnAlterar.TabIndex = 2;
             btnAlterar.Text = "Alterar";
             btnAlterar.UseVisualStyleBackColor = true;
+            btnAlterar.Click += btnAlterar_Click;
             // 
             // btnExcluir
             // 
-            btnExcluir.Location = new Point(227, 409);
+            btnExcluir.Location = new Point(174, 385);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(75, 23);
             btnExcluir.TabIndex = 3;
@@ -77,7 +79,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 415);
             Controls.Add(btnExcluir);
             Controls.Add(btnAlterar);
             Controls.Add(btnAdicionar);
